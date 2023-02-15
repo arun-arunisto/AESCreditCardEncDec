@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Login - srtdash</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{url_for('static', filename='assets/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='assets/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='assets/css/themify-icons.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='assets/css/metisMenu.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='assets/css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='assets/css/slicknav.min.css')}}">
+    <!-- amchart css -->
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+    <!-- others css -->
+    <link rel="stylesheet" href="{{url_for('static', filename='assets/css/typography.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='assets/css/default-css.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='assets/css/styles.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='assets/css/responsive.css')}}">
+    <!-- modernizr css -->
+    <script src="{{url_for('static', filename='assets/js/vendor/modernizr-2.8.3.min.js')}}"></script>
+</head>
+<body>
+<div id="preloader">
+    <div class="loader"></div>
+</div>
+<div class="login-area login-s2">
+    <div class="container">
+        <div class="login-box ptb--100">
+            <form action="/aes_cc" method="post">
+                <div class="login-form-head">
+                    <h4>AES Credit card Encryption Decryption</h4>
+                    {% for f in get_flashed_messages() %}
+                        <p>{{f}}</p>
+                    {% endfor %}
+                </div>
+                <div class="login-form-body">
+                    <div class="form-gp">
+                        <label for="name">Credit Card Number</label>
+                        <input type="text" id="name" name="ccnumber">
+                        <i class="ti-credit-card"></i>
+                    </div>
+                    <!----div class="form-gp">
+                        <label for="money">Amount to transfer</label>
+                        <input type="number" id="money" name="money">
+                        <i class="ti-credit-card"></i>
+                    </div---->
+                    <div class="submit-btn-area">
+                        <button id="form_submit" type="submit">Encrypt</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+    <script src="{{url_for('static', filename='assets/js/vendor/jquery-2.2.4.min.js')}}"></script>
+    <!-- bootstrap 4 js -->
+    <script src="{{url_for('static', filename='assets/js/popper.min.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/js/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/js/owl.carousel.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/js/metisMenu.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/js/jquery.slimscroll.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/js/jquery.slicknav.min.js')}}"></script>
+
+    <!-- others plugins -->
+    <script src="{{url_for('static', filename='assets/js/plugins.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/js/scripts.js')}}"></script>
+</body>
+</html>
